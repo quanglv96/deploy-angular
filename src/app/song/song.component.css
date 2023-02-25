@@ -1,0 +1,180 @@
+.song-area {
+  background: linear-gradient(315deg, rgb(191, 132, 255) 0%, rgb(253, 158, 142) 100%);
+
+}
+
+.song-details {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.play-button {
+  width: 60px;
+  height: 60px;
+  background-color: orangered;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.header-right {
+  height: 100%;
+}
+
+.item-tag {
+  background-color: #999999;
+  color: white;
+  padding: 2px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.item-tag:hover {
+  background-color: #615e5e;
+}
+.item-tag + .item-tag {
+  margin-left: 1px;
+}
+
+.song-description {
+  width: 100%;
+}
+
+.input-container {
+  background-color: #f2f2f2;
+}
+
+.input-comment, .input-container {
+  width: 100%;
+}
+
+.input-comment {
+  outline: none;
+  border: none;
+  padding: 0 8px;
+}
+
+.comment-area .c-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.comment {
+  position: relative;
+}
+
+.send-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 25px;
+  cursor: pointer;
+}
+
+.padding-y-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.random-img {
+  width: 50px;
+  height: 50px;
+}
+
+.fit-head {
+  position: relative;
+  top: -2px;
+}
+
+.user-img {
+  height: 50px;
+  object-fit: contain;
+  aspect-ratio: 1 / 1;
+}
+
+.line-16 {
+  line-height: 16px;
+}
+
+.random-songs {
+  height: 100%;
+}
+
+#waveform {
+  position: relative;
+}
+
+.play-line {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  right: 0;
+  left: 0;
+  padding: 0 3px;
+  height: 2px;
+  z-index: 4;
+}
+
+.line {
+  border-top: 2px solid #a8a8a8;
+  width: 100%;
+  display: block;
+}
+
+.time {
+  position: absolute;
+  bottom: 50%;
+  z-index: 4;
+}
+
+.time-start-container {
+  left: 0;
+}
+
+.time-end-container {
+  right: 0;
+}
+
+.time-start, .time-end {
+  font-size: 10px;
+  padding: 0 2px;
+  line-height: 14px;
+  background-color: #333333;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.time-start {
+  margin-left: 3px;
+}
+
+.time-end {
+  margin-right: 3px;
+}
+
+.c-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.s-user {
+  padding: 8px 16px;
+  color: white;
+  background-color: black;
+}
+
+.s-name {
+  padding: 12px 16px;
+  color: white;
+  background-color: black;
+}
+
+.like {
+  border: 1px solid orangered;
+  color: orangered;
+}

@@ -1,0 +1,50 @@
+<div class="row" scrollTracker >
+  <div class="item-image col-3">
+    <div class="image-search pointer">
+<!--      AVT-->
+      <img alt="" class="fit-image" src="{{song['avatar']}}" (click)="redirectSongDetail(song.id)">
+    </div>
+  </div>
+  <div class="item-desc audio-feedback col-9 d-flex flex-column justify-content-between">
+    <div class="desc-box row">
+      <div class="col-8 g-2 mt-0">
+        <div class="d-flex px-2">
+          <div class="play-btn-1 play-btn d-flex justify-content-center align-items-center me-2" (click)="playSong(song.id)">
+            <!--          play Song-->
+            <i *ngIf="!isPlaying" class="fa-solid fa-play play-btn-icon"></i>
+            <i *ngIf="isPlaying" class="fa-solid fa-pause"></i>
+          </div>
+          <div class="first-desc-row d-inline-block">
+            <p class="user-upload m-0 grey-text font-12">{{song['users'].username}}</p>
+            <p class="item-name m-0">{{song.name}}{{song['singerList'] | toStringSinger}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 g-2 mt-0">
+        <div class="second-desc-row d-flex justify-content-end flex-column" style="width: 100%">
+          <div class="date-upload m-0 grey-text font-12" style="text-align: right">{{song.date | amTimeAgo}}</div>
+          <div class="d-flex justify-content-end flex-wrap"><span *ngFor="let s of song?.['tagsList']" class="item-tag" [routerLink]="['/tags', s.id, s.name]"> #{{ s.name }}</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="play-box">
+      <div class="wave-song-{{ song.id }}">
+
+      </div>
+      <div class="action-box d-flex justify-content-between mt-2">
+        <div class="like-box">
+        <span
+          class="like-count font-12 grey-text border py-1 px-2 me-1 border-radius-1 pointer">
+          <i class="fa-solid fa-heart"></i> {{ song['userLikeSong'].length }}
+        </span>
+          <span class="play-count font-12 grey-text border py-1 px-2 me-1 border-radius-1 pointer">
+          <i class="fa-solid fa-play"></i> {{song['views']}}
+        </span>
+          <span class="like-count font-12 grey-text border py-1 px-2 border-radius-1" (click)="openModalAddSongToPlaylist(song)">
+          <i class="fa-solid fa-square-plus"></i> Add to playlist
+        </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+.play-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: orangered;
+  color: white;
+  cursor: pointer;
+}
+
+.act-btn {
+  padding: 4px 8px;
+  border: 1px solid rgba(157, 157, 157, 0.5);
+  cursor: pointer;
+}
+
+.act-btn + .act-btn {
+  margin-left: 4px;
+}
+
+.fix {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.song-item {
+  border: 1px solid rgba(208, 208, 208, 0.3);
+  padding: 4px;
+  height: 30px;
+  margin-bottom: 2px;
+  cursor: pointer;
+}
+
+.song-item:hover {
+  background-color: rgb(238, 238, 238);
+}
+
+.image {
+  height: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.row + .row {
+  margin-top: 24px;
+}
+
+.delete-btn {
+  padding: 0 4px;
+  color: grey;
+}
+
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}

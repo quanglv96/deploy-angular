@@ -1,0 +1,41 @@
+<div class="container-fluid p-0 slider">
+  <owl-carousel-o [options]="options">
+    <ng-container *ngFor="let s of slides">
+      <ng-template carouselSlide>
+        <img [src]="s">
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</div>
+<div class="container">
+  <div class="text-center my-5">
+    <span class="text-center home-input-group">
+      <input type="text" class="home-input" [(ngModel)]="textSearch" placeholder="Search for artists, bands, tracks, podcasts">
+      <span class="home-input-icon" (click)="routeSearch()"><i class="fa-solid fa-magnifying-glass"></i></span>
+    </span>
+  </div>
+
+  <h4 class="text-center mb-5" style="font-weight: 300">Hear what’s trending for free in the NDTQ community</h4>
+
+  <div class="trending-wrapper px-4">
+    <div class="row">
+      <div class="col-20 mb-4" *ngFor="let song of songs" [routerLink]="['/song',song.id]">
+        <div class="item">
+          <img class="fit-image" src="{{song.avatar}}" alt="">
+          <p class="nowrap m-0 mt-2">{{song.name}}{{song.singerList | toStringSinger}}</p>
+          <p class="m-0 item-description font-12 grey-text">{{song.users?.username}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-3 mb-5">
+    <button class="explore-btn" routerLink="trending">Explore trending</button>
+  </div>
+
+  <div class="text-center mb-4">
+    <h2 style="font-weight: 400">Thanks for listening. Now join in.</h2>
+    <h4 style="font-weight: 300">Save tracks, follow artists and build playlists. All for free.</h4>
+    <button class="create-btn" routerLink="/auth" [hidden]="statusLogin">Create account / Sign in</button>
+  </div>
+</div>

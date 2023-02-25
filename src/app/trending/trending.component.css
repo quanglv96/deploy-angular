@@ -1,0 +1,10 @@
+.header {
+  letter-spacing: 3px;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.mobile-app {
+  object-fit: contain;
+  width: 100%;
+}
